@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "319230779360",
+    "firebase_url": "https://cfe-sync-ghassan-2026-default-rtdb.firebaseio.com",
+    "project_id": "cfe-sync-ghassan-2026",
+    "storage_bucket": "cfe-sync-ghassan-2026.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319230779360:android:99161441479487eca2d585",
+        "android_client_info": {
+          "package_name": "com.example.offline_survey_and_sync_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319230779360-5rncnars5n2q7pq2rceplbvu8jtq7e54.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.offline_survey_and_sync_app",
+            "certificate_hash": "d333a6ce1cbd0cf0567ea7d3298faa50b6461b6c"
+          }
+        },
+        {
+          "client_id": "319230779360-3sku876342qjui7agsbtpltq2s2efnj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkyxll3nzlp_PHSTNE8Y_wOLg1DeNFHmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319230779360-3sku876342qjui7agsbtpltq2s2efnj0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "319230779360-6j0k2la55b2vo2e6ght2siljgrk9ikp2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.offlineSurveyAndSyncApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

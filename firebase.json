@@ -1,0 +1,38 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "cfe-sync-ghassan-2026",
+          "appId": "1:319230779360:android:99161441479487eca2d585",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "cfe-sync-ghassan-2026",
+          "configurations": {
+            "android": "1:319230779360:android:99161441479487eca2d585",
+            "ios": "1:319230779360:ios:544b3a04fbdd6c7aa2d585",
+            "macos": "1:319230779360:ios:544b3a04fbdd6c7aa2d585",
+            "web": "1:319230779360:web:aee0e6c43857ad45a2d585",
+            "windows": "1:319230779360:web:28c27d2bfcf75952a2d585"
+          }
+        }
+      }
+    }
+  },
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "emulators": {
+    "database": {
+      "port": 9000
+    },
+    "ui": {
+      "enabled": true,
+      "port": 4000
+    },
+    "singleProjectMode": true
+  }
+}

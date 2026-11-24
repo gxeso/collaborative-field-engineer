@@ -1,0 +1,44 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "workspaceMembers": {
+      "$workspaceId": {
+        "$uid": {
+          ".read": "auth != null && auth.uid === $uid",
+          ".write": false,
+          "role": {
+            ".validate": "newData.isString() && (newData.val() === 'viewer' || newData.val() === 'editor' || newData.val() === 'admin')"
+          },
+          "$other": {
+            ".validate": false
+          }
+        }
+      }
+    },
+    "workspaces": {
+      "$workspaceId": {
+        ".read": "auth != null && (root.child('workspaceMembers').child($workspaceId).child(auth.uid).child('role').val() === 'viewer' || root.child('workspaceMembers').child($workspaceId).child(auth.uid).child('role').val() === 'editor' || root.child('workspaceMembers').child($workspaceId).child(auth.uid).child('role').val() === 'admin')",
+        ".write": "auth != null && root.child('workspaceMembers').child($workspaceId).child(auth.uid).child('role').val() === 'admin'",
+        "surveySites": {
+          "$siteId": {
+            ".validate": "!newData.exists() || (newData.child('id').val() === $siteId && newData.child('lastOperationId').isString() && newData.child('remoteUpdatedAt').isString())"
+          }
+        },
+        "observations": {
+          "$observationId": {
+            ".validate": "!newData.exists() || (newData.child('id').val() === $observationId && newData.child('lastOperationId').isString() && newData.child('remoteUpdatedAt').isString())"
+          }
+        },
+        "processedOperations": {
+          "$operationId": {
+            ".validate": "newData.hasChildren(['operationId', 'entityType', 'entityId', 'operationType', 'processedAt']) && newData.child('operationId').val() === $operationId && newData.child('entityType').isString() && newData.child('entityId').isString() && newData.child('operationType').isString() && newData.child('processedAt').isString()"
+          }
+        },
+        "$other": {
+          ".validate": false
+        }
+      }
+    }
+  }
+}
